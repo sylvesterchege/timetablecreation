@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+    <h3>School Timetable Implementation Guide</h3>
+    <style>
+        .grid-item{
+            text-align: center;
+            border: 0.5px solid black;
+            font-size: small;
+            font: sans-serif;
+
+        }
+        .container{
+            display: grid;
+            grid-template-rows: repeat(26, 1fr);
+            grid-template-columns: repeat(14, 1fr);
+        }
+        .grid-item15{
+            grid-row: span 5;
+        }
+        .grid-item15,.grid-item16,.grid-item18,.grid-item20,.grid-item24,.grid-item28,.grid-item61,.grid-item65,.grid-item65,.grid-item72,.grid-item105,.grid-item109,.grid-item113,.grid-item116,.grid-item116,.grid-item149,.grid-item153,.grid-item157,.grid-item160,.grid-item193,.grid-item197,.grid-item201,.grid-item204{
+            display: flex;
+            align-items: center;    
+        }
+        .grid-item16{
+            grid-row:span 25;                    
+        }
+        .grid-item18{
+            grid-row: span 5;
+        }
+        .grid-item20{
+            grid-row: span 5;
+        }
+        .grid-item24{
+            grid-row: span 5;
+        }
+        .grid-item28{
+            grid-row: span 25;
+        }
+        .grid-item61{
+            grid-row: span 5;
+        }
+        .grid-item65{
+            grid-row: span 5;
+        }
+        .grid-item69{
+            grid-row: span 5;
+        }
+        .grid-item72{
+            grid-row: span 5;
+        }
+        .grid-item105{
+            grid-row: span 5;
+        }
+        .grid-item109{
+            grid-row:span 5 ;
+        }
+        .grid-item113{
+            grid-row: span 5;
+        }
+        .grid-item116{
+            grid-row: span 5;
+        }
+        .grid-item149{
+            grid-row: span 5;
+        }
+        .grid-item153{
+            grid-row: span 5;
+        }
+        .grid-item157{
+            grid-row: span 5;
+        }
+        .grid-item160{
+            grid-row: span 5;
+        }
+        .grid-item193{
+            grid-row: span 5;
+        }
+        .grid-item197{
+            grid-row: span 5;
+        }
+        .grid-item201{
+            grid-row: span 5;
+        }
+        .grid-item204{
+            grid-row: span 5;
+        }
+        p{
+            display: flex;
+            justify-content: center;            
+        }
+        
+    </style>
+</head>
+<body>
+    <p>MASTER TIMETABLE FOR 2024/2025 ACADEMIC YEAR</p>
+    <div class="container">
+        <div class="grid-item grid-item1">Day/Time</div>
+        <div class="grid-item grid-item2">8:00-8:10</div>
+        <div class="grid-item grid-item3"></div>
+        <div class="grid-item grid-item4">8.10-8.55</div>
+        <div class="grid-item grid-item5">9.00-9.45</div>
+        <div class="grid-item grid-item6">9.45-10.15</div>
+        <div class="grid-item grid-item7">10.15-11.00</div>
+        <div class="grid-item grid-item8">11.05-11.50</div>
+        <div class="grid-item grid-item9">11.55-12.40</div>
+        <div class="grid-item grid-item10">12.40-1.30</div>
+        <div class="grid-item grid-item11">1.30-2.15</div>
+        <div class="grid-item grid-item12">2.20-3.05</div>
+        <div class="grid-item grid-item13">3.10-3.55</div>
+        <div class="grid-item grid-item14">3.55-4.00</div>
+        <div class="grid-item grid-item15">MON</div>
+        <div class="grid-item grid-item16">FORM TUTOR'S TIME</div>
+        <div class="grid-item grid-item17">Yr.7</div>
+        <div class="grid-item grid-item18">Devotion</div>
+        <div class="grid-item grid-item19">ICT 2</div>
+        <div class="grid-item grid-item20">BREAK</div>
+        <div class="grid-item grid-item21">MATH 11</div>
+        <div class="grid-item grid-item22">ENG 17</div>
+        <div class="grid-item grid-item23">P.E 13</div>
+        <div class="grid-item grid-item24">LUNCH</div>
+        <div class="grid-item grid-item25">GEO 15</div>
+        <div class="grid-item grid-item26">SCIENCE 20</div>
+        <div class="grid-item grid-item27">MUSIC 8</div>
+        <div class="grid-item grid-item28">FORM TUTOR'S TIME</div>
+        <div class="grid-item grid-item29">Yr. 8</div>
+        <div class="grid-item grid-item30">MATH 11</div>
+        <div class="grid-item grid-item31">SCIENCE 9</div>
+        <div class="grid-item grid-item32">ART 18</div>
+        <div class="grid-item grid-item33">P.E 13</div>
+        <div class="grid-item grid-item34">ENG 17</div>
+        <div class="grid-item grid-item35">L.S 14</div>
+        <div class="grid-item grid-item36">L.S 14</div>
+        <div class="grid-item grid-item37">Yr.9</div>
+        <div class="grid-item grid-item38">ENG 17</div>
+        <div class="grid-item grid-item39">HIST 10</div>
+        <div class="grid-item grid-item40">SCIENCE 9</div>
+        <div class="grid-item grid-item41">SWA13/FRE 5/CHI6</div>
+        <div class="grid-item grid-item42">BUS</div>
+        <div class="grid-item grid-item43">MATH 4</div>
+        <div class="grid-item grid-item44">P.E 13</div>
+        <div class="grid-item grid-item45">Yr. 10</div>
+        <div class="grid-item grid-item46">ENG 7</div>
+        <div class="grid-item grid-item47">L.S 14</div>
+        <div class="grid-item grid-item48">L.S 14</div>
+        <div class="grid-item grid-item49">MATH 4</div>
+        <div class="grid-item grid-item50">BIO 19</div>
+        <div class="grid-item grid-item51">GEO 15</div>
+        <div class="grid-item grid-item52">HIST 10</div>
+        <div class="grid-item grid-item53">Yr 11</div>
+        <div class="grid-item grid-item54">GEO 15/FRE 5</div>
+        <div class="grid-item grid-item55">BIO 3</div>
+        <div class="grid-item grid-item56">FRE/ICT 12</div>
+        <div class="grid-item grid-item57">ENG 7</div>
+        <div class="grid-item grid-item58">PHY 16</div>
+        <div class="grid-item grid-item59">SWA 13</div>
+        <div class="grid-item grid-item60">MATH 4</div>
+        <div class="grid-item grid-item61">TUE</div>
+        <div class="grid-item grid-item62">Yr 7</div>
+        <div class="grid-item grid-item63">SCIENCE 9</div>
+        <div class="grid-item grid-item64">LIB</div>
+        <div class="grid-item grid-item65">BREAK</div>
+        <div class="grid-item grid-item66">MATH 11</div>
+        <div class="grid-item grid-item67">ART 18</div>
+        <div class="grid-item grid-item68">P.E 13</div>
+        <div class="grid-item grid-item69">LUNCH</div>
+        <div class="grid-item grid-item70">ENG 17</div>
+        <div class="grid-item grid-item71">HIST 1</div>
+        <div class="grid-item grid-item72">GENDER MEETING /DEBATE</div>
+        <div class="grid-item grid-item73">Yr 8</div>
+        <div class="grid-item grid-item74">MATH 11</div>
+        <div class="grid-item grid-item75">SCIENCE 9</div>
+        <div class="grid-item grid-item76">ENG 17</div>
+        <div class="grid-item grid-item77">GEO 15</div>
+        <div class="grid-item grid-item78">P.E 13</div>
+        <div class="grid-item grid-item79">HIST 1</div>
+        <div class="grid-item grid-item80">ICT 2</div>
+        <div class="grid-item grid-item81">Yr 9</div>
+        <div class="grid-item grid-item82">ENG 17</div>
+        <div class="grid-item grid-item83">SWA13/FRE 5/CHI6</div>
+        <div class="grid-item grid-item84">L.S 14</div>
+        <div class="grid-item grid-item85">L.S 14</div>
+        <div class="grid-item grid-item86">MATH 4</div>
+        <div class="grid-item grid-item87">P.E 13</div>
+        <div class="grid-item grid-item88">SCIENCE 9</div>
+        <div class="grid-item grid-item89">Yr 10</div>
+        <div class="grid-item grid-item90">MATH 4</div>
+        <div class="grid-item grid-item91">ENG 7</div>
+        <div class="grid-item grid-item92">HIST 10</div>
+        <div class="grid-item grid-item93">CHEM 19</div>
+        <div class="grid-item grid-item94">PHY 9</div>
+        <div class="grid-item grid-item95">BUS15/CHI 6/FRE 5</div>
+        <div class="grid-item grid-item96">BUS15/CHI 6/FRE 5</div>
+        <div class="grid-item grid-item97">Yr 11</div>
+        <div class="grid-item grid-item98">ENG 7</div>
+        <div class="grid-item grid-item99">MATH 4</div>
+        <div class="grid-item grid-item100">PHY 16</div>
+        <div class="grid-item grid-item101">GEO 15/FRE 5</div>
+        <div class="grid-item grid-item102">HIST 10</div>
+        <div class="grid-item grid-item103">BUS 4</div>
+        <div class="grid-item grid-item104">BUS 4</div>
+        <div class="grid-item grid-item105">WED</div>
+        <div class="grid-item grid-item106">Yr 7</div>
+        <div class="grid-item grid-item107">SCIENCE 9</div>
+        <div class="grid-item grid-item108">MATH 11</div>
+        <div class="grid-item grid-item109">BREAK</div>
+        <div class="grid-item grid-item110">GEO 15</div>
+        <div class="grid-item grid-item111">ENG 17</div>
+        <div class="grid-item grid-item112">P.E 13</div>
+        <div class="grid-item grid-item113">LUNCH</div>
+        <div class="grid-item grid-item114">HIST 1</div>
+        <div class="grid-item grid-item115">ART 18</div>
+        <div class="grid-item grid-item116">CLUBS</div>
+        <div class="grid-item grid-item117">Yr 8</div>
+        <div class="grid-item grid-item118">MATH 11</div>
+        <div class="grid-item grid-item119">ENG 17</div>
+        <div class="grid-item grid-item120">HIST 1</div>
+        <div class="grid-item grid-item121">ART 18</div>
+        <div class="grid-item grid-item122">P.E 13</div>
+        <div class="grid-item grid-item123">SCIENCE 9</div>
+        <div class="grid-item grid-item124">MUSIC 8</div>
+        <div class="grid-item grid-item125">Yr 8</div>
+        <div class="grid-item grid-item126">ENG 17</div>
+        <div class="grid-item grid-item127">SCIENCE 9</div>
+        <div class="grid-item grid-item128">ICT 2</div>
+        <div class="grid-item grid-item129">ICT 2</div>
+        <div class="grid-item grid-item130">GEO 15</div>
+        <div class="grid-item grid-item131">MATH 4</div>
+        <div class="grid-item grid-item132">HIST 10</div>
+        <div class="grid-item grid-item133">Yr 10</div>
+        <div class="grid-item grid-item134">ICT 2/SWA 13</div>
+        <div class="grid-item grid-item135">ICT 2/SWA 13</div>
+        <div class="grid-item grid-item136">MATH 4</div>
+        <div class="grid-item grid-item137">PHY 9</div>
+        <div class="grid-item grid-item138">ENG 7</div>
+        <div class="grid-item grid-item139">BIO 19</div>
+        <div class="grid-item grid-item140">GEO 15</div>
+        <div class="grid-item grid-item141">Yr 11</div>
+        <div class="grid-item grid-item142">BUS 4</div>
+        <div class="grid-item grid-item143">ENG 7</div>
+        <div class="grid-item grid-item144">CHEM 3</div>
+        <div class="grid-item grid-item145">GEO 15</div>
+        <div class="grid-item grid-item146">MATH 4</div>
+        <div class="grid-item grid-item147">ICT 12</div>
+        <div class="grid-item grid-item148">ICT 12</div>
+        <div class="grid-item grid-item149">THUR</div>
+        <div class="grid-item grid-item150">Yr 7</div>
+        <div class="grid-item grid-item151">MATH 11</div>
+        <div class="grid-item grid-item152">SCIENCE 9</div>
+        <div class="grid-item grid-item153">BREAK</div>
+        <div class="grid-item grid-item154">HIST 1</div>
+        <div class="grid-item grid-item155">ENG 17</div>
+        <div class="grid-item grid-item156">ICT 2</div>
+        <div class="grid-item grid-item157">LUNCH</div>
+        <div class="grid-item grid-item158">L.S 14</div>
+        <div class="grid-item grid-item159">L.S 14</div>
+        <div class="grid-item grid-item160">MIND LECTURE</div>
+        <div class="grid-item grid-item161">Yr 8</div>
+        <div class="grid-item grid-item162">ENG 17</div>
+        <div class="grid-item grid-item163">LIB</div>
+        <div class="grid-item grid-item164">MATH 11</div>
+        <div class="grid-item grid-item165">GEO 15</div>
+        <div class="grid-item grid-item166">MUSIC 9</div>
+        <div class="grid-item grid-item167">SCIENCE 9</div>
+        <div class="grid-item grid-item168">SCIENCE 9</div>
+        <div class="grid-item grid-item169">Yr 9</div>
+        <div class="grid-item grid-item170">SCIENCE 9</div>
+        <div class="grid-item grid-item171">ENG 17</div>
+        <div class="grid-item grid-item172">MATH 4</div>
+        <div class="grid-item grid-item173">HIST 10</div>
+        <div class="grid-item grid-item174">P.E 13</div>
+        <div class="grid-item grid-item175">GEO 15</div>
+        <div class="grid-item grid-item176">BUS 11</div>
+        <div class="grid-item grid-item177">Yr 10</div>
+        <div class="grid-item grid-item178">MATH 4</div>
+        <div class="grid-item grid-item179">CHEM 19</div>
+        <div class="grid-item grid-item180">ENG 7</div>
+        <div class="grid-item grid-item181">PHY 9</div>
+        <div class="grid-item grid-item182">PHY 9</div>
+        <div class="grid-item grid-item183">PHY 9</div>
+        <div class="grid-item grid-item184">GEO 15</div>
+        <div class="grid-item grid-item185">Yr 11</div>
+        <div class="grid-item grid-item186">ENG 7</div>
+        <div class="grid-item grid-item187">BUS 4</div>
+        <div class="grid-item grid-item188">CHEM 3</div>
+        <div class="grid-item grid-item189">CHEM 3</div>
+        <div class="grid-item grid-item190">PHY 16</div>
+        <div class="grid-item grid-item191">SWA 16</div>
+        <div class="grid-item grid-item192">SWA 13</div>
+        <div class="grid-item grid-item193">FRI</div>
+        <div class="grid-item grid-item194">Yr 7</div>
+        <div class="grid-item grid-item195">MATH 11</div>
+        <div class="grid-item grid-item196">ICT 2</div>
+        <div class="grid-item grid-item197">BREAK</div>
+        <div class="grid-item grid-item198">ENG 17</div>
+        <div class="grid-item grid-item199">GEO 15</div>
+        <div class="grid-item grid-item200">P.E 13</div>
+        <div class="grid-item grid-item201">LUNCH</div>
+        <div class="grid-item grid-item202">SCIENCE 9</div>
+        <div class="grid-item grid-item203">MUSIC 8</div>
+        <div class="grid-item grid-item204">GAMES</div>
+        <div class="grid-item grid-item205">Yr 8</div>
+        <div class="grid-item grid-item206">ENG 17</div>
+        <div class="grid-item grid-item207">GEO 15</div>
+        <div class="grid-item grid-item208">MATH 11</div>
+        <div class="grid-item grid-item209">HIST 1</div>
+        <div class="grid-item grid-item210">P.E 13</div>
+        <div class="grid-item grid-item211">ICT 2</div>
+        <div class="grid-item grid-item212">ICT 2</div>
+        <div class="grid-item grid-item213">Yr 9</div>
+        <div class="grid-item grid-item214">GEO 15</div>
+        <div class="grid-item grid-item215">MATH 4</div>
+        <div class="grid-item grid-item216">ICT 2</div>
+        <div class="grid-item grid-item217">ENG 17</div>
+        <div class="grid-item grid-item218">SCIENCE 9</div>
+        <div class="grid-item grid-item219">BUS 11</div>
+        <div class="grid-item grid-item220">SWA13/FRE 5/CHI6</div>
+        <div class="grid-item grid-item221">Yr 10</div>
+        <div class="grid-item grid-item222">ICT 2/ SWA 13</div>
+        <div class="grid-item grid-item223">HIST 10</div>
+        <div class="grid-item grid-item224">MATH 4</div>
+        <div class="grid-item grid-item225">CHEM 19</div>
+        <div class="grid-item grid-item226">ENG 7</div>
+        <div class="grid-item grid-item227">BUS15/CHI 6/FRE 5</div>
+        <div class="grid-item grid-item228">BIO 19</div>
+        <div class="grid-item grid-item229">Yr 11</div>
+        <div class="grid-item grid-item230">BIO 3</div>
+        <div class="grid-item grid-item231">BIO 3</div>
+        <div class="grid-item grid-item232">ENG 7</div>
+        <div class="grid-item grid-item233">MATH 4</div>
+        <div class="grid-item grid-item234">MATH 4</div>
+        <div class="grid-item grid-item235">HIST 10</div>
+        <div class="grid-item grid-item236">HIST 10</div>                 
+    </div>    
+    
+</body>
+<footer>
+    1 Jackline;2 Joseph;3 Pauline;4 Ken;5 Brillian
+</footer>
+</html>
